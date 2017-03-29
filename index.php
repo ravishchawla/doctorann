@@ -1,1 +1,1 @@
-<?php header( 'Location: MOCKUP_UI/main.html' ) ;  ?>
+<?php header( 'Location:/main.html' ) ;  ?>
