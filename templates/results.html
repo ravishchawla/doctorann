@@ -39,7 +39,7 @@
         <a href="#m4"  data-title="Video">Video</a>
       </li>
       <li id="Link5">
-        <a href="#m5"  data-title="Paper">Help</a>
+        <a href="#m5"  data-title="Help">Help</a>
       </li>
     </ul>
   </nav>
@@ -81,6 +81,20 @@
   <!--Statistics from our Deep Learning Model -->
   <div id="m2">
   <article class="larg">
+      <center><p>Data</p></center>
+  <div>
+  <h3>Mimic III<span class="entypo-down-open"></span></h3>
+          <p>Information: To train and test our model we used data from the MIMIC III database. MIMIC is an openly available dataset
+          developed by the MIT Lab for Computational Physiology, comprising deidentified health data associated with
+          ~40,000 critical care patients. It includes demographics, vital signs, laboratory tests, medications, and more.
+        We used clinical notes from the noteevents table in this dataset as well as diagnosis codes from the
+          diagnoses_icd table. More information about this database can be found from https://mimic.physionet.org.</p>
+          <p>Preprocessing:</p>
+  </div>
+
+
+
+
   <center><p>Deep Learning Model</p></center>
   <div>
   <h3>Feature Generation<span class="entypo-down-open"></span></h3>
@@ -144,8 +158,24 @@
 
  <div id ="m5">
       <article class="larg">
-          <p>Instructions:</p>
-          <p>To use this site blah blah</p>
+          <center><h4>Instructions</h4></center>
+          <p><b>Diagnosis:</b> The diagnosis tab displays the deep learning model results. Under the "Your Clinical Note" tab
+          you will find an annotated clinical note which displays any tests, treatments, or problems that were found
+          in the note. Underneath the "Your Clinical Note" tab there are three boxes. Each of these boxes displays an ICD-9
+          code. The first box contains the most likely predicted ICD-9 code based on the clinical note. The second box is
+          the second most likely, and the third box is the third most likely. Inside each box you will find the model's
+          probability for the prediction as well as a description of the ICD-9 code.</p>
+          <br>
+          <p><b>Statistics:</b> In the statistics tab you will find information about our model such as the details of the deep
+          learning algorithm for ICD-9 prediction, the natural language processing on the clinical note using conditional
+          random fields, and some performance measurements and charts from the deep learning algorithm.</p>
+          <br>
+          <p><b>Paper:</b> Here you will find the research paper, which outlines how we built our system.</p>
+          <br>
+          <p><b>Video:</b> Here you will find a video where we discuss how the system was built. You will also find a tutorial
+          of the system here.</p>
+          <br>
+          <p><b>Help:</b> You are here.</p>
       </article>
   </div>
 
