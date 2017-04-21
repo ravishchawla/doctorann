@@ -1,7 +1,10 @@
 __author__ = 'Adamlieberman'
 from flask import Flask, render_template, request
-from scraper import scrape_icd9, cliner_response
+from scraper import scrape_icd9, scrape_icd92, cliner_response
 import os;
+
+from feature_generation import *
+from LSTM_handler import *
 
 app = Flask(__name__)
 
@@ -16,15 +19,30 @@ def results_page():
 @app.route('/',methods=['GET','POST'])
 def input_page_post():
 
-    #Obtain the clinical note
+    #Obtain the user's clinical note
     clinical_note = request.form.get('clinical_note',type=str)
+
+    #Conditional Random Field  on user's clinical note to obtain labeling
     cliner_note = cliner_response(clinical_note)
-    codes = [250.01, 250.02, 250.03]
-    description = scrape_icd9(codes)
-    #Process the clinical note
-    clinical_note = clinical_note.lower()
-    #t = 'h<font color="red">aaaa</font>gggg'
-    return render_template('results.html',note=cliner_note, code=codes,description=description)
+
+    #Create feature vector
+    feature = create_feature(clinical_note)
+
+    #Load the LSTM
+    model = load_LSTM()
+
+    #Return the ICD9 codes, probabilities, and topk
+    codes, probabilities, topk = predict(feature,model,3)
+
+    format_probs = []
+    for i in probabilities:
+        format_probs.append(str(i*100)+" %")
+
+
+    #Scrape the codes descriptions
+    description = scrape_icd92(codes)
+
+    return render_template('results.html',note=cliner_note, code=codes,description=description,format_probs=format_probs)
 
 
 if __name__ == "__main__":

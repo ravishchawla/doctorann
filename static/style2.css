@@ -973,19 +973,19 @@ header nav ul li a:before {
   left: -32px;
 }
 header nav ul li:first-child a:before {
-  content: "\268f";
+  content: "\e791";
 }
 header nav ul li:nth-child(2) a:before {
-  content: "\f328";
+  content: "\1f4cb";
 }
 header nav ul li:nth-child(3) a:before {
-  content: "\1f4c5";
+  content: "\1f4f0";
 }
 header nav ul li:nth-child(4) a:before {
-  content: "\e771";
+  content: "\1f3ac";
 }
 header nav ul li:nth-child(5) a:before {
-  content: "\2699";
+  content: "\e704";
 }
 header nav ul li:nth-child(6) a:before {
   content: "\1f50d";

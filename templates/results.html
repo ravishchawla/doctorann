@@ -33,7 +33,13 @@
         <a href="#m2"  data-title="Statistics">Statistics</a>
       </li>
       <li id="Link3">
-        <a href="#m3"  data-title="Export">Export</a>
+        <a href="#m3"  data-title="Paper">Paper</a>
+      </li>
+      <li id="Link4">
+        <a href="#m4"  data-title="Video">Video</a>
+      </li>
+      <li id="Link5">
+        <a href="#m5"  data-title="Paper">Help</a>
       </li>
     </ul>
   </nav>
@@ -56,20 +62,17 @@
     <center><p>Predicted Diagnoses</p></center>
     <div>
       <h3>{{ code[0] | safe }}<span class="entypo-down-open"></span></h3>
-      <p>Confidence: 82%</p>
-      <p>Description: Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled.</p>
+      <p>Probability: {{format_probs[0] | safe }}</p>
       <p>Description: {{ description[0] | safe }}</p>
     </div>
     <div>
       <h3>{{ code[1] | safe }} <span class="entypo-down-open"></span></h3>
-      <p>Confidence: 64%</p>
-      <p>Description: Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled.</p>
-        <p>Description: {{ description[1] | safe }}</p>
+      <p>Probability: {{format_probs[1] | safe }}</p>
+      <p>Description: {{ description[1] | safe }}</p>
     </div>
     <div>
       <h3>{{ code[2] | safe }} <span class="entypo-down-open"></span></h3>
-      <p>Confidence: 55%</p>
-      <p>Description: Diabetes mellitus without mention of complication, type I [juvenile type], uncontrolled.</p>
+      <p>Probability: {{format_probs[2] | safe }}</p>
       <p>Description: {{ description[2] | safe }}</p>
     </div>
   </article>
@@ -80,8 +83,14 @@
   <article class="larg">
   <center><p>Deep Learning Model</p></center>
   <div>
-  <h3>Basic Statistics<span class="entypo-down-open"></span></h3>
+  <h3>Feature Generation<span class="entypo-down-open"></span></h3>
   </div>
+  <div>
+  <h3>Model Architecture<span class="entypo-down-open"></span></h3>
+      <p></p>
+      <p></p>
+  </div>
+      <center><p>Performance Measurements</p></center>
   <div>
   <h3>Confusion Matrix<span class="entypo-down-open"></span></h3>
   </div>
@@ -116,10 +125,28 @@
 
 
   <div id="m3">
-
   <article class="larg">
-  <center><iframe src="email.html" name="iframe_a" frameBorder="0"></iframe></center>
+      <br><br>
+  <center><!--<iframe src="email.html" name="iframe_a" frameBorder="0"></iframe> -->
+  <iframe src="https://arxiv.org/pdf/1406.2661.pdf&embedded=true#zoom=90" style="width:718px; height:600px;" frameborder="0"></iframe>
+  </center>
   </article>
+  </div>
+
+  <div id="m4">
+  <article class="larg">
+  <center><!--<iframe src="email.html" name="iframe_a" frameBorder="0"></iframe> -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WkkC9cK8Hz0" frameborder="0" allowfullscreen></iframe></center>
+  </center>
+  </article>
+  </div>
+
+
+ <div id ="m5">
+      <article class="larg">
+          <p>Instructions:</p>
+          <p>To use this site blah blah</p>
+      </article>
   </div>
 
 
@@ -135,21 +162,43 @@
       $("#m1").css('display','block')
       $("#m2").css('display','none');
       $("#m3").css('display','none');
+      $("#m4").css('display','none');
+      $("#m5").css('display','none');
     });
   $("#Link1").click(function() {
     $("#m1").show()
     $("#m2").hide()
     $("#m3").hide()
+    $("#m4").hide()
+    $("#m5").hide()
     }); 
   $("#Link2").click(function() {
     $("#m2").show()
     $("#m1").hide()
     $("#m3").hide()
+    $("#m4").hide()
+    $("#m5").hide()
     }); 
   $("#Link3").click(function() {
     $("#m3").show()
     $("#m1").hide()
     $("#m2").hide()
+    $("#m4").hide()
+    $("#m5").hide()
+    });
+  $("#Link4").click(function() {
+    $("#m4").show()
+    $("#m1").hide()
+    $("#m2").hide()
+    $("#m3").hide()
+    $("#m5").hide()
+    });
+  $("#Link5").click(function() {
+    $("#m5").show()
+    $("#m1").hide()
+    $("#m2").hide()
+    $("#m3").hide()
+    $("#m4").hide()
     });
   </script>
 </body>
