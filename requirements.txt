@@ -1,15 +1,1 @@
-beautifulsoup4==4.5.3
-bs4==0.0.1
 Flask==0.12.1
-html5lib==0.999999999
-Jinja2==2.9.6
-lxml==3.7.3
-MarkupSafe==1.0
-mechanize==0.3.1
-requests==2.13.0
-six==1.10.0
-Werkzeug==0.12.1
-pandas==0.18.1
-scikit-learn==0.17.1
-tensorflow==1.0.1
-Keras==2.0.3
