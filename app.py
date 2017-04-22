@@ -2,6 +2,9 @@ __author__ = 'Adamlieberman'
 from flask import Flask, render_template, request
 from scraper import scrape_icd9, scrape_icd92, cliner_response
 import os;
+import requests;
+import json;
+import sys;
 
 from feature_generation import *
 from LSTM_handler import *
@@ -10,6 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def input_page():
+    requests.get('http://doctorann-api.herokuapp.com/api/wake');
     return render_template('main.html')
 
 @app.route('/results.html')
@@ -26,7 +30,13 @@ def input_page_post():
     cliner_note = cliner_response(clinical_note)
 
     #Create feature vector
-    feature = create_feature(clinical_note)
+    #feature = create_feature(clinical_note)
+
+
+    r = requests.post('http://doctorann-api.herokuapp.com/api/transform', json={'note' : str(cliner_note)});
+    tx = r.text;
+
+    feature = np.array(json.loads(str(tx))['result']);
 
     #Load the LSTM
     model = load_LSTM()
