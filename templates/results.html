@@ -30,7 +30,7 @@
         <a href="#m1" data-title="Diagnosis">Diagnosis</a>
       </li>
       <li id="Link2">
-        <a href="#m2"  data-title="Statistics">Statistics</a>
+        <a href="#m2"  data-title="Modes">Model</a>
       </li>
       <li id="Link3">
         <a href="#m3"  data-title="Paper">Paper</a>
@@ -40,6 +40,9 @@
       </li>
       <li id="Link5">
         <a href="#m5"  data-title="Help">Help</a>
+      </li>
+      <li id="Link6">
+        <a href="/"  data-title="Help">Back</a>
       </li>
     </ul>
   </nav>
@@ -89,7 +92,7 @@
           ~40,000 critical care patients. It includes demographics, vital signs, laboratory tests, medications, and more.
         We used clinical notes from the noteevents table in this dataset as well as diagnosis codes from the
           diagnoses_icd table. More information about this database can be found from https://mimic.physionet.org.</p>
-          <p>Preprocessing:</p>
+          <p>Preprocessing: The clinical notes were originally messy and hardly machine readable. To clean our data we remove stopwords, special characters, upper case characters, non-standard whitespace characters, and dates.</p>
   </div>
 
 
@@ -98,24 +101,51 @@
   <center><p>Deep Learning Model</p></center>
   <div>
   <h3>Feature Generation<span class="entypo-down-open"></span></h3>
+  <p>To create our feature we start by creating a clinical corpus by looping over each clincal note in the training set and extracting the clinical concepts. At this stage we are returned clinical words and phrases. We tokenize each clinical concept to create individual words in our vocabulry. We then create a tfidf vectorizer and fit our vocabulary to it. We can then fit transform our cleaned clinica notes and perform SVD on it to reduce the dimensionality of our dataset, but still preserve the features in it. This outputs a feature vector with 1000 columns. </p>
   </div>
   <div>
   <h3>Model Architecture<span class="entypo-down-open"></span></h3>
-      <p></p>
-      <p></p>
+      <p>We implemented a sequential model with an LSTM layer and a dense layer. The LSTM layer has 32 neurons and connects
+      to the dense layer which classifies and outputs the probability over 1070 possible ICD-9 codes. The model was initially trained for 200 epochs, but stabilized around 10 epochs. We return the top 3 highest probabilities as the recommended diagnoses based off the patient's note.</p>
   </div>
-      <center><p>Performance Measurements</p></center>
+  <center><p>Performance Measurements</p></center>
   <div>
+  <h3>Accuracy<span class="entypo-down-open"></span></h3>
+  <!--<p>Accuracy:</p>
+  <p>Precision:</p>
+  <p>Recall:</p>
+  <p>F1 Score:</p>
+  <p>Confusion Matrix:</p> -->
+  </div>
+
+  <div>
+  <h3>Precision<span class="entypo-down-open"></span></h3>
+  </div>
+
+  <div>
+  <h3>Recall<span class="entypo-down-open"></span></h3>
+  </div>
+
+  <div>
+  <h3>F1 Score<span class="entypo-down-open"></span></h3>
+  </div>
+
+  <div>
+  <h3>AUC<span class="entypo-down-open"></span></h3>
+  </div>
+
+
+  <!--<div>
   <h3>Confusion Matrix<span class="entypo-down-open"></span></h3>
   </div>
   <div>
   <h3>Learning Curve<span class="entypo-down-open"></span></h3>
-  </div>
-  <br>
+  </div> -->
+  <!--<br>
   <center><p>Predicted Confidence</p></center>
   <div>
   <h3>Confidence Statistics<span class="entypo-down-open"></span></h3>
-  </div>
+  </div> -->
     <!--<div>
       <h3>250.01<span class="entypo-down-open"></span></h3>
       <p><b>Note 1: </b>the patient has nausea, is vomiting, and dehydrated.</p>
@@ -166,9 +196,8 @@
           the second most likely, and the third box is the third most likely. Inside each box you will find the model's
           probability for the prediction as well as a description of the ICD-9 code.</p>
           <br>
-          <p><b>Statistics:</b> In the statistics tab you will find information about our model such as the details of the deep
-          learning algorithm for ICD-9 prediction, the natural language processing on the clinical note using conditional
-          random fields, and some performance measurements and charts from the deep learning algorithm.</p>
+          <p><b>Model:</b> In the Model tab you will find information about our model such as the details of the data we used, how we build our features, the deep
+          learning algorithm, and performance measurements on our test set.</p>
           <br>
           <p><b>Paper:</b> Here you will find the research paper, which outlines how we built our system.</p>
           <br>
