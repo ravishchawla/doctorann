@@ -62,7 +62,7 @@
 
   <article class="larg">
   <div>
-      <h3>Your Clinical Note<span class="entypo-down-open"></span></h3>
+      <h3>Your Clinical Note<span class="entypo-menu"></span></h3>
       {{ note | safe }}
       <!--<p>{{ t | safe}}</p> -->
       <!--<p>This dropdown contains the inputted clinical note. Here we will <font color="green">highlight</font> what made us predict the number 1 predicted ICD-9 code.</p> -->
@@ -70,17 +70,17 @@
     <br>
     <center><p>Predicted Diagnoses</p></center>
     <div>
-      <h3>{{ code[0] | safe }}<span class="entypo-down-open"></span></h3>
+      <h3>{{ code[0] | safe }}<span class="entypo-menu"></span></h3>
       <p>Probability: {{format_probs[0] | safe }}</p>
       <p>Description: {{ description[0] | safe }}</p>
     </div>
     <div>
-      <h3>{{ code[1] | safe }} <span class="entypo-down-open"></span></h3>
+      <h3>{{ code[1] | safe }} <span class="entypo-menu"></span></h3>
       <p>Probability: {{format_probs[1] | safe }}</p>
       <p>Description: {{ description[1] | safe }}</p>
     </div>
     <div>
-      <h3>{{ code[2] | safe }} <span class="entypo-down-open"></span></h3>
+      <h3>{{ code[2] | safe }} <span class="entypo-menu"></span></h3>
       <p>Probability: {{format_probs[2] | safe }}</p>
       <p>Description: {{ description[2] | safe }}</p>
     </div>
@@ -92,7 +92,7 @@
   <article class="larg">
       <center><p>Data</p></center>
   <div>
-  <h3>Mimic III<span class="entypo-down-open"></span></h3>
+  <h3>Mimic III<span class="entypo-menu"></span></h3>
           <p>Information: To train and test our model we used data from the MIMIC III database. MIMIC is an openly available dataset
           developed by the MIT Lab for Computational Physiology, comprising deidentified health data associated with
           ~40,000 critical care patients. It includes demographics, vital signs, laboratory tests, medications, and more.
