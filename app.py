@@ -1,10 +1,9 @@
 __author__ = 'Adamlieberman'
 from flask import Flask, render_template, request
-from scraper import scrape_icd9, scrape_icd92, cliner_response
-import os;
-import requests;
-import json;
-import sys;
+from scraper import scrape_icd92, cliner_response
+import os
+import requests
+import json
 
 from feature_generation import *
 from LSTM_handler import *

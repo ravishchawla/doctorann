@@ -11,7 +11,6 @@ def scrape_icd9(codes):
     all_descriptions = []
     for c in codes:
         c = str(c)
-        print c
 
         #If we have a .00 ICD9 code
         if c[-2:] == ".0":
@@ -85,20 +84,22 @@ def scrape_icd92(codes):
                         break
                     count = count + 1
             except(TypeError, KeyError) as e:
-                c2 = str(c) +".00"
-                link = "https://www.findacode.com/code.php?set=ICD9&c="+c2
-                html = requests.get(link).text
-                soup = BeautifulSoup(html,"html.parser")
-                blockquote = soup.find("div",{"class":"sectionbody"})
-                ls = list(blockquote)
-                count = 1
-                for i in ls[1]:
-                    if count == 3:
-                        description = i.replace("-","").lstrip()
-                        all_descriptions.append(description)
-                        break
-                    count = count + 1
-
+                try:
+                    c2 = str(c) +".00"
+                    link = "https://www.findacode.com/code.php?set=ICD9&c="+c2
+                    html = requests.get(link).text
+                    soup = BeautifulSoup(html,"html.parser")
+                    blockquote = soup.find("div",{"class":"sectionbody"})
+                    ls = list(blockquote)
+                    count = 1
+                    for i in ls[1]:
+                        if count == 3:
+                            description = i.replace("-","").lstrip()
+                            all_descriptions.append(description)
+                            break
+                        count = count + 1
+                except:
+                    all_descriptions.append("Desctiption for ICD-9 code "+str(c)+" is not available.")
     return all_descriptions
 
 
@@ -129,7 +130,8 @@ if __name__=="__main__":
     #x = "598.00"
     #print x[-2:]
     #codes = [250.00]
-    codes = ['598','340','E932']
+    #codes = ['598','340','E932']
+    codes = ['518', '427', '584']
     description = scrape_icd92(codes)
     print description
 

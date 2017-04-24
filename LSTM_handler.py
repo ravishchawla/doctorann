@@ -59,4 +59,3 @@ if __name__ == "__main__":
     with open(r"icd9_mapping", "rb") as input_file:
         dict_icd9_index = pickle.load(input_file)
     print(dict_icd9_index)
-    #mode = load_LSTM()
