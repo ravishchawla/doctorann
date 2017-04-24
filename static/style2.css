@@ -105,6 +105,7 @@
 }
 .entypo-back:before {
   content: "\1f519";
+  color: orange;
 }
 .entypo-home:before {
   content: "\2302";
@@ -994,7 +995,7 @@ header nav ul li:nth-child(3) a:before {
   content: "\1f4d6"
 }
 header nav ul li:nth-child(8) a:before {
-  content: "\1f4bc";
+  content: "\1f519";
 }
 main {
   flex: 1;
