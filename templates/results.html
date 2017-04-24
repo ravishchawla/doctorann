@@ -111,7 +111,7 @@
   </div>
   <div>
   <h3>Model Architecture<span class="entypo-menu"></span></h3>
-      <p>We implemented a sequential model with an LSTM layer and a dense layer. The LSTM layer has 32 neurons and connects
+      <p>We implemented a sequential model with an LSTM layer, a dense layer, and a dense layer. The LSTM layer has 32 neurons and connects
       to the dense layer which classifies and outputs the probability over 1070 possible ICD-9 codes. The model was initially trained for 200 epochs, but stabilized around 10 epochs. We return the top 3 highest probabilities as the recommended diagnoses based off the patient's note.</p>
   </div>
   <center><p>Performance Measurements</p></center>
@@ -180,7 +180,7 @@
       <br><br>
       <style>
     .scrolly {
-    overflow-y: auto;
+    /*overflow-y: auto; */
     position: relative;
     max-height: 600px;
 }</style>
@@ -188,13 +188,13 @@
   <!--<iframe src="https://arxiv.org/pdf/1406.2661.pdf&embedded=true#zoom=90" style="width:718px; height:600px;" frameborder="0"></iframe> -->
 
       <p>Data Cleaning</p>
-      <div class="scrolly"><iframe src="//ad1m.github.io/dr_ann_html/" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+      <!--<div class="scrolly">--><iframe src="//ad1m.github.io/dr_ann_html/" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe><!--</div>-->
 
       <p>Metrics</p>
-      <div class="scrolly"><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+      <!--<div class=>--><iframe src="//ad1m.github.io/dr_ann_html/Multiclass_LSTM.html" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe><!--</div>-->
 
       <p>Notebook #3</p>
-      <div class="scrolly"><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+      <!--<div class="scrolly">--><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe><!--</div>-->
   </center>
   </article>
   </div>
