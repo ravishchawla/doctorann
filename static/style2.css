@@ -978,17 +978,23 @@ header nav ul li:first-child a:before {
 header nav ul li:nth-child(2) a:before {
   content: "\1f4cb";
 }
-header nav ul li:nth-child(3) a:before {
+header nav ul li:nth-child(4) a:before {
   content: "\1f4f0";
 }
-header nav ul li:nth-child(4) a:before {
+header nav ul li:nth-child(5) a:before {
   content: "\1f3ac";
 }
-header nav ul li:nth-child(5) a:before {
+header nav ul li:nth-child(6) a:before {
+  content: "\1f465";
+}
+header nav ul li:nth-child(7) a:before {
   content: "\e704";
 }
-header nav ul li:nth-child(6) a:before {
-  content: "\1f50d";
+header nav ul li:nth-child(3) a:before {
+  content: "\1f4d6"
+}
+header nav ul li:nth-child(8) a:before {
+  content: "\2b05";
 }
 main {
   flex: 1;
