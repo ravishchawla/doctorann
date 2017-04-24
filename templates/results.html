@@ -107,12 +107,12 @@
   <center><p>Deep Learning Model</p></center>
   <div>
   <h3>Feature Generation<span class="entypo-menu"></span></h3>
-  <p>To create our feature we start by creating a clinical corpus by looping over each clincal note in the training set and extracting the clinical concepts. At this stage we are returned clinical words and phrases. We tokenize each clinical concept to create individual words in our vocabulry. We then create a tfidf vectorizer and fit our vocabulary to it. We can then fit transform our cleaned clinica notes and perform SVD on it to reduce the dimensionality of our dataset, but still preserve the features in it. This outputs a feature vector with 1000 columns. </p>
+  <p>To create our feature we start by creating a clinical corpus by looping over each clincal note in the training set and extracting the clinical concepts. At this stage we are returned clinical words and phrases. We tokenize each clinical concept to create individual words in our vocabulary. We then create a tf-idf vectorizer and fit our vocabulary to it. We can then fit transform our cleaned clinical notes and perform SVD on it to reduce the dimensionality of our dataset, but still preserve the features in it. This outputs a feature vector with 1000 columns. </p>
   </div>
   <div>
   <h3>Model Architecture<span class="entypo-menu"></span></h3>
-      <p>We implemented a sequential model with an LSTM layer, a dense layer, and a dense layer. The LSTM layer has 32 neurons and connects
-      to the dense layer which classifies and outputs the probability over 1070 possible ICD-9 codes. The model was initially trained for 200 epochs, but stabilized around 10 epochs. We return the top 3 highest probabilities as the recommended diagnoses based off the patient's note.</p>
+      <p>We implemented a sequential model with an LSTM layer with 32 neurons, a dropout layer, and a dense layer. The LSTM layer connects
+      to the dropout layer which connects to the dense layer which classifies and outputs the probability over 1070 possible ICD-9 codes. The model was initially trained for 200 epochs, but stabilized around 10 epochs. We return the top 3 highest probabilities as the recommended diagnoses based off the patient's note.</p>
   </div>
   <center><p>Performance Measurements</p></center>
   <div>
