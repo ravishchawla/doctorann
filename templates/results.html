@@ -30,7 +30,10 @@
         <a href="#m1" data-title="Diagnosis">Diagnosis</a>
       </li>
       <li id="Link2">
-        <a href="#m2"  data-title="Modes">Model</a>
+        <a href="#m2"  data-title="Model">Model</a>
+      </li>
+      <li id="Link7">
+        <a href="#m7"  data-title="Notebooks">Notebooks</a>
       </li>
       <li id="Link3">
         <a href="#m3"  data-title="Paper">Paper</a>
@@ -38,11 +41,14 @@
       <li id="Link4">
         <a href="#m4"  data-title="Video">Video</a>
       </li>
+      <li id="Link8">
+        <a href="#m8"  data-title="AboutUS">About Us</a>
+      </li>
       <li id="Link5">
         <a href="#m5"  data-title="Help">Help</a>
       </li>
       <li id="Link6">
-        <a href="/"  data-title="Help">Back</a>
+        <a href="/"  data-title="Back">Back</a>
       </li>
     </ul>
   </nav>
@@ -168,6 +174,31 @@
   </div>
 
 
+
+  <div id="m7">
+  <article class="larg">
+      <br><br>
+      <style>
+    .scrolly {
+    overflow-y: auto;
+    position: relative;
+    max-height: 600px;
+}</style>
+  <center><!--<iframe src="email.html" name="iframe_a" frameBorder="0"></iframe> -->
+  <!--<iframe src="https://arxiv.org/pdf/1406.2661.pdf&embedded=true#zoom=90" style="width:718px; height:600px;" frameborder="0"></iframe> -->
+      <p>Notebook #1</p>
+      <div class="scrolly"><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+
+      <p>Notebook #2</p>
+      <div class="scrolly"><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+
+      <p>Notebook #3</p>
+      <div class="scrolly"><iframe src="//ad1m.github.io/derivative" style="width: 900px; height: 600px;" frameborder="0" allowfullscreen></iframe></div>
+  </center>
+  </article>
+  </div>
+
+
   <div id="m3">
   <article class="larg">
       <br><br>
@@ -186,6 +217,33 @@
   </div>
 
 
+  <div id="m8">
+  <article class="larg">
+  <div>
+  <h3>Adam Lieberman<span class="entypo-down-open"></span></h3>
+  <p>Degrees: Undergraduate in Applied Mathematics & Masters in Computer Science with a specialization in Machine Learning both from
+  the Georgia Institute of Technology</p>
+  <p>Contact: adam.justin.lieberman@gmail.com</p>
+  <p>GitHub: github.com/ad1m</p>
+  </div>
+  <div>
+  <h3>Ravish Chawla<span class="entypo-down-open"></span></h3>
+  <p>Degrees: Undergraduate in Computer Science & Masters in Computer Science with a specialization in Machine Learning both from
+  the Georgia Institute of Technology</p>
+  <p>Contact: ravishchawla@gmail.com </p>
+  <p>GitHub: github.com/ravishchawla</p>
+  </div>
+  <div>
+  <h3>Garrett Mallory<span class="entypo-down-open"></span></h3>
+  <p>Degrees: Undergraduate in Computer Science & Masters in Computer Science with a specialization in Machine Learning both from
+  the Georgia Institute of Technology</p>
+  <p>Contact: gmallory3@gmail.com </p>
+  <p>GitHub: github.com/gmallory3</p>
+  </div>
+  </article>
+  </div>
+
+
  <div id ="m5">
       <article class="larg">
           <center><h4>Instructions</h4></center>
@@ -199,12 +257,19 @@
           <p><b>Model:</b> In the Model tab you will find information about our model such as the details of the data we used, how we build our features, the deep
           learning algorithm, and performance measurements on our test set.</p>
           <br>
+          <p><b>Notebooks:</b> In the Notebooks tab you will find some jupyter notebooks, which contain some backend code used to create Dr. ANN. You will also
+          find some plots in the notebooks.</p>
+          <br>
           <p><b>Paper:</b> Here you will find the research paper, which outlines how we built our system.</p>
           <br>
           <p><b>Video:</b> Here you will find a video where we discuss how the system was built. You will also find a tutorial
           of the system here.</p>
           <br>
+          <p><b>About Us:</b> Here you will learn more about the creators of Dr. ANN.</p>
+          <br>
           <p><b>Help:</b> You are here.</p>
+          <br>
+          <p><b>Back:</b> Clicking the back button takes the user back to the main page, where another clinical note can be entered.</p>
       </article>
   </div>
 
@@ -223,6 +288,8 @@
       $("#m3").css('display','none');
       $("#m4").css('display','none');
       $("#m5").css('display','none');
+      $("#m7").css('display','none');
+      $("#m8").css('display','none');
     });
   $("#Link1").click(function() {
     $("#m1").show()
@@ -230,6 +297,8 @@
     $("#m3").hide()
     $("#m4").hide()
     $("#m5").hide()
+    $("#m7").hide()
+    $("#m8").hide()
     }); 
   $("#Link2").click(function() {
     $("#m2").show()
@@ -237,6 +306,8 @@
     $("#m3").hide()
     $("#m4").hide()
     $("#m5").hide()
+    $("#m7").hide()
+    $("#m8").hide()
     }); 
   $("#Link3").click(function() {
     $("#m3").show()
@@ -244,6 +315,8 @@
     $("#m2").hide()
     $("#m4").hide()
     $("#m5").hide()
+    $("#m7").hide()
+    $("#m8").hide()
     });
   $("#Link4").click(function() {
     $("#m4").show()
@@ -251,6 +324,8 @@
     $("#m2").hide()
     $("#m3").hide()
     $("#m5").hide()
+    $("#m7").hide()
+    $("#m8").hide()
     });
   $("#Link5").click(function() {
     $("#m5").show()
@@ -258,6 +333,26 @@
     $("#m2").hide()
     $("#m3").hide()
     $("#m4").hide()
+    $("#m7").hide()
+    $("#m8").hide()
+    });
+  $("#Link7").click(function() {
+    $("#m7").show()
+    $("#m1").hide()
+    $("#m2").hide()
+    $("#m3").hide()
+    $("#m4").hide()
+    $("#m5").hide()
+    $("#m8").hide()
+    });
+    $("#Link8").click(function() {
+    $("#m8").show()
+    $("#m1").hide()
+    $("#m2").hide()
+    $("#m3").hide()
+    $("#m4").hide()
+    $("#m5").hide()
+    $("#m7").hide()
     });
   </script>
 </body>
