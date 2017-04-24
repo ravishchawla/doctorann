@@ -106,17 +106,17 @@
 
   <center><p>Deep Learning Model</p></center>
   <div>
-  <h3>Feature Generation<span class="entypo-down-open"></span></h3>
+  <h3>Feature Generation<span class="entypo-menu"></span></h3>
   <p>To create our feature we start by creating a clinical corpus by looping over each clincal note in the training set and extracting the clinical concepts. At this stage we are returned clinical words and phrases. We tokenize each clinical concept to create individual words in our vocabulry. We then create a tfidf vectorizer and fit our vocabulary to it. We can then fit transform our cleaned clinica notes and perform SVD on it to reduce the dimensionality of our dataset, but still preserve the features in it. This outputs a feature vector with 1000 columns. </p>
   </div>
   <div>
-  <h3>Model Architecture<span class="entypo-down-open"></span></h3>
+  <h3>Model Architecture<span class="entypo-menu"></span></h3>
       <p>We implemented a sequential model with an LSTM layer and a dense layer. The LSTM layer has 32 neurons and connects
       to the dense layer which classifies and outputs the probability over 1070 possible ICD-9 codes. The model was initially trained for 200 epochs, but stabilized around 10 epochs. We return the top 3 highest probabilities as the recommended diagnoses based off the patient's note.</p>
   </div>
   <center><p>Performance Measurements</p></center>
   <div>
-  <h3>Accuracy<span class="entypo-down-open"></span></h3>
+  <h3>Accuracy<span class="entypo-menu"></span></h3>
   <!--<p>Accuracy:</p>
   <p>Precision:</p>
   <p>Recall:</p>
@@ -125,19 +125,19 @@
   </div>
 
   <div>
-  <h3>Precision<span class="entypo-down-open"></span></h3>
+  <h3>Precision<span class="entypo-menu"></span></h3>
   </div>
 
   <div>
-  <h3>Recall<span class="entypo-down-open"></span></h3>
+  <h3>Recall<span class="entypo-menu"></span></h3>
   </div>
 
   <div>
-  <h3>F1 Score<span class="entypo-down-open"></span></h3>
+  <h3>F1 Score<span class="entypo-menu"></span></h3>
   </div>
 
   <div>
-  <h3>AUC<span class="entypo-down-open"></span></h3>
+  <h3>AUC<span class="entypo-menu"></span></h3>
   </div>
 
 
@@ -220,21 +220,21 @@
   <div id="m8">
   <article class="larg">
   <div>
-  <h3>Adam Lieberman<span class="entypo-down-open"></span></h3>
+  <h3>Adam Lieberman<span class="entypo-menu"></span></h3>
   <p>Degrees: Undergraduate in Applied Mathematics & Masters in Computer Science with a specialization in Machine Learning both from
   the Georgia Institute of Technology</p>
   <p>Contact: adam.justin.lieberman@gmail.com</p>
   <p>GitHub: github.com/ad1m</p>
   </div>
   <div>
-  <h3>Ravish Chawla<span class="entypo-down-open"></span></h3>
+  <h3>Ravish Chawla<span class="entypo-menu"></span></h3>
   <p>Degrees: Undergraduate in Computer Science & Masters in Computer Science with a specialization in Machine Learning both from
   the Georgia Institute of Technology</p>
   <p>Contact: ravishchawla@gmail.com </p>
   <p>GitHub: github.com/ravishchawla</p>
   </div>
   <div>
-  <h3>Garrett Mallory<span class="entypo-down-open"></span></h3>
+  <h3>Garrett Mallory<span class="entypo-menu"></span></h3>
   <p>Degrees: Undergraduate in Computer Science & Masters in Computer Science with a specialization in Machine Learning both from
   the Georgia Institute of Technology</p>
   <p>Contact: gmallory3@gmail.com </p>
