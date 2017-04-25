@@ -50,7 +50,7 @@ A web based system that uses deep learning to diagnosis patients based on their 
 
 ## To run the Code
 
-You can run the Site, you can run App.py. However, because of file size limitatins, the SVD model was not uploaded to Git. This means that the model must be obtained again using the Feature Construction code in the base repository.
+Please first install the requirements in requirements.txt. These can all be installed with pip. We used python 2.7.13 for this project. Navigate to the doctorann-api repository and change the port from 5000 to 5001 in app.py. Next, navigate to the Dr-ANN repository and run app.py. Go to port 5000 in your local host and the web application will be loaded. 
 
 
 <img src='http://i.imgur.com/bE6iAGu.jpg' width=800px/>
