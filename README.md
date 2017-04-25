@@ -7,7 +7,7 @@
 
 A web based system that uses deep learning to diagnosis patients based on their clinical notes.
 
-###Authors - Ravish Chawla, Adam Lieberman, Garrett, Mallory
+### Authors - Ravish Chawla, Adam Lieberman, Garrett, Mallory
 
 ## Front-End code.
 
