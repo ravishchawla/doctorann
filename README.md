@@ -16,11 +16,11 @@ A web based system that uses deep learning to diagnosis patients based on their 
 - app.py
   - This file instantiates the Flask App and controls the necessary HTTP routes.
 - scraper.py
-  - This script scrapes the ICD9 
+  - This script scrapes the ICD9 code descriptions for the predicted ICD9 codes.  
 - feature_generation.py
   - This Class generates the features from the given Clinical Note.
 - LSTM_Handler.py
-  - This Class predicts the features from the features in the previous step.
+  - This Class loads the LSTM model and predicts the ICD9 codes from the features generated in feature_generation.py.
 
 #### Flask Files
 
